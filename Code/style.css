@@ -1,7 +1,7 @@
 :root {
   --grey: #fcfcfc;
   --brown: #4e1e06;
-  --green: #13d25f;
+  --green: #2cdd73;
 
 }
 
@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: Metropolis;
+  font-family: 'Zilla Slab';
 }
 
 .s1_background {
@@ -52,7 +52,7 @@ body {
 
 .s1_nav_link {
   color: var(--grey);
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   font-size: 16px;
   padding: 15px 0px;
@@ -65,7 +65,7 @@ body {
 
 .s1_nav_button {
   color: var(--brown);
-  font-weight: bold;
+  font-weight: 700;
   background: var(--grey);
   border-radius: 100px;
   display: inline-block;
@@ -103,6 +103,7 @@ h1 {
   color: var(--brown);
   padding-bottom: 25px;
   font-size: 48px;
+  font-weight: 700;
 }
 
 .s1_textbox_text {
@@ -110,6 +111,10 @@ h1 {
   line-height: 30px;
   font-size: 18px;
 
+}
+
+.s1_naviconclose {
+  display: none;
 }
 
 /* S2 */
@@ -124,10 +129,11 @@ h1 {
 }
 
 .s2_textbox {
-  width: 100%;
+  width: 70%;
   height: auto;
   color: var(--grey);
-  text-align: right;
+  text-align: center;
+  margin: 0 auto;
 }
 
 
@@ -138,10 +144,20 @@ h1 {
 }
 
 .s2_textbox_text {
-  width: 45%;
+  width: 100%;
   color: white;
   line-height: 30px;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+.s2_textbox_part2 {
+  margin-top: 4%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.s2_textbox_part2 ul {
+  list-style: none;
 }
 
 .s2_textbox_img {
@@ -153,6 +169,16 @@ h2 {
   font-size: 36px;
   color: var(--brown);
   padding-bottom: 15px;
+  font-weight: 700;
+}
+
+h4 {
+  opacity: 0.8;
+  color: var(--brown);
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 h5 {
@@ -160,6 +186,7 @@ h5 {
   color: var(--brown);
   text-transform: uppercase;
   padding-bottom: 10px;
+  font-weight: 700;
 }
 
 /* S3 */
@@ -181,7 +208,7 @@ h5 {
 .green_h2 {
   font-size: 36px;
   color: var(--green);
-  padding-bottom: 15px;
+  padding-bottom: 40px;
 }
 
 .green_h5 {
@@ -195,28 +222,28 @@ h5 {
   margin: 0 auto 20px;
   background-color: #fff;
   height: auto;
-  width: 50%;
+  width: 40%;
   height: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px 15px 15px 0;
   border-radius: 30px;
   box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.2);
 }
 
 .member_img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
-  border-radius: 100px;
+  border-radius: 30px 0 0 30px;
 }
 
 .member_info {
   width: 250px;
 }
 
-/*  S4 */
+/* S4 */
 
 .s4_background {
   background-color: var(--grey);
@@ -228,13 +255,20 @@ h5 {
   background-color: var(--grey);
   width: 80%;
   margin: 0 auto;
+  padding: 40px 0;
+}
+
+.s4_content {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* 768 px */
 
 @media all and (max-width: 768px) {
     .s1 {
-     
+     height: auto;
+     padding-bottom: 40px;
     }
 
     .s1_logo {
@@ -250,6 +284,7 @@ h5 {
       right: 10%;
       top: 40px;
       width: 30px;
+      display: block;
     }
 
     .s1_nav {
@@ -266,7 +301,7 @@ h5 {
     }
 
     .s1_picture {
-      height: 25vh;
+      display: none;
     }
 
     .s1_textbox_text {
@@ -275,7 +310,7 @@ h5 {
 
     .s1_nav_link {
       color: var(--green);
-      width: 100%;
+      width: 50%;
       display: inline-block;
       font-weight: bold;
       text-decoration: none;
@@ -310,6 +345,11 @@ h5 {
       display: none;
     }
 
+    .s2 {
+      height: auto;
+      padding-bottom: 40px;
+    }
+
     .s2_textbox {
       text-align: center;
     }
@@ -321,5 +361,50 @@ h5 {
 
     .s2_textbox_img {
       display: none;
+    }
+
+    .s2_textbox_part2 {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .s2_textbox_s1 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .s2_textbox_s2 {
+      width: 100%;
+    }
+
+    h4 {
+      text-align: center;
+    }
+    
+    .s4_content {
+      flex-wrap: wrap;
+    }
+
+    .s4 h2 {
+      text-align: center;
+    }
+
+    .s4_content div {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .member_box {
+      padding-left: 15px;
+      width: 60%;
+    }
+
+    .member_img {
+      display: none;
+    }
+
+    .member_info {
+      width: 100%;
     }
 }
